@@ -1,0 +1,60 @@
+from otree.api import (
+    models, widgets, BaseConstants, BaseSubsession, BaseGroup, BasePlayer,
+)
+
+author = 'RR'
+
+doc = """
+Beliefs Task
+"""
+# To read from the CSV file
+import pandas as pd
+
+class Constants(BaseConstants):
+    name_in_url = 'Fase1'
+    num_rounds = 1
+    players_per_group = None
+    app_name = 'Fase1'
+
+    # Colors picked with a good pallete
+    hex_colors = ["#F8766D", "#00BFC4"]
+
+
+class Subsession(BaseSubsession):
+    def creating_session(self):
+
+        farm_dat = pd.read_csv("farmdata/data.csv")
+        self.session.vars["beliefs_farm_dat"] = farm_dat
+        self.session.vars["beliefs_hex_colors"] = ["#ff9933", "#00BFC4"]
+
+class Group(BaseGroup):
+    pass
+
+class Player(BasePlayer):
+    quiz = models.CharField(choices=[['0', '12.28'],['2', '9.78'],['1','16.53']],
+                               widget= widgets.RadioSelectHorizontal,
+                               label='1. In base alla figura mostrata quale sarà il vostro guadagno se il reddito varierà del + 2%',
+                              blank=True,default = "")
+    quiz2 = models.CharField(choices=[['0', '19.03'], ['1', '9.78'], ['2', '10.78']],
+                               widget=widgets.RadioSelectHorizontal,
+                               label='2.In base alla figura mostrata quale sarà il vostro guadagno se il reddito varierà del + 20%',
+                              blank=True,default = "" )
+
+    labelset = models.IntegerField(default = 0)
+
+    final_payment = models.StringField()
+
+    bin1  = models.IntegerField(initial = 0)
+    bin2  = models.IntegerField(initial = 0)
+    bin3  = models.IntegerField(initial = 0)
+    bin4  = models.IntegerField(initial = 0)
+    bin5  = models.IntegerField(initial = 0)
+    bin6  = models.IntegerField(initial = 0)
+    bin7  = models.IntegerField(initial = 0)
+    bin8  = models.IntegerField(initial = 0)
+    bin9  = models.IntegerField(initial = 0)
+    bin10 = models.IntegerField(initial = 0)
+
+
+
+    w_amt = models.FloatField(default=0,min=0,label="")
