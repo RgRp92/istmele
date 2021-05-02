@@ -158,18 +158,18 @@ class Player(BasePlayer):
 
     q17 = models.StringField(
         choices=[['1','50 €/ettaro'],['2','100 €/ettaro'],['3','150 €/ettaro'],['4','200 €/ettaro'],['5','250 €/ettaro']],
-        label= '17. Se deve scegliere quanti €/ettaro pagare come quota fissa per aderire alla copertura '
-               'mutualistica del Fondo IST mele, quale preferisce?',
+        label= '17. Quanti €/ettaro preferisce pagare come quota fissa per aderire alla copertura '
+               'mutualistica del Fondo IST mele?',
         widget=widgets.RadioSelect)
 
     q18 = models.StringField(
         choices=[['1', '10%'], ['2', '15%'],['3', '20%'],['4', '25%'],['5', '30%']],
-        label='18. Se deve scegliere una soglia di reddito per il Fondo IST mele, quale preferisce?',
+        label='18. Quale soglia di reddito per il Fondo IST mele preferisce tra queste?',
         widget=widgets.RadioSelect)
 
     q19 = models.StringField(
         choices=[['1', 'Fino al 60%'], ['2', 'Fino al 65%'],['3', 'Fino al 70%'],['4', 'Fino al 75%'],['5', 'Fino al 80%']],
-        label='19. Se deve scegliere una percentuale di compensazione dal Fondo IST Mele, quale preferisce?',
+        label='19. Quale percentuale di compensazione dal Fondo IST Mele preferisce tra queste?',
         widget=widgets.RadioSelect)
 
     q20 = models.StringField(
