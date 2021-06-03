@@ -25,6 +25,10 @@ class ISTPage3c(Page):
 class ISTPage4(Page):
     form_model = 'player'
 
+class ISTPage4b(Page):
+    form_model = 'player'
+
+
 class IstruzioniPage1(Page):
     form_model = 'player'
 
@@ -251,8 +255,8 @@ class IstruzioniPage3a(Page):
             's1_b1_4': Constants.s1_b1[3],
             's1_b1_5': Constants.s1_b1[4],
 
-            'diff_a': Constants.diff_4[0],
-            'diff_b': Constants.diff_4[1],
+            'diff_a': Constants.diff_1[0],
+            'diff_b': Constants.diff_1[1],
 
         }
 
@@ -297,8 +301,8 @@ class IstruzioniPage3b(Page):
             's1_b1_4': Constants.s1_b1[3],
             's1_b1_5': Constants.s1_b1[4],
 
-            'diff_a': Constants.diff_4[0],
-            'diff_b': Constants.diff_4[1],
+            'diff_a': Constants.diff_1[0],
+            'diff_b': Constants.diff_1[1],
 
         }
 
@@ -343,14 +347,13 @@ class IstruzioniPage3c(Page):
             's1_b1_4': Constants.s1_b1[3],
             's1_b1_5': Constants.s1_b1[4],
 
-            'diff_a': Constants.diff_4[0],
-            'diff_b': Constants.diff_4[1],
+            'diff_a': Constants.diff_1[0],
+            'diff_b': Constants.diff_1[1],
 
         }
 
 class IstruzioniPage4(Page):
     form_model = 'player'
-
 class IstruzioniPage5(Page):
     form_model = 'player'
 
@@ -1019,6 +1022,7 @@ page_sequence = [
     ISTPage3b,
     ISTPage3c,
     ISTPage4,
+    ISTPage4b,
     IstruzioniPage1,
     IstruzioniPage2,
     IstruzioniPage2b,
